@@ -1,332 +1,342 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-:root {
-    --primary: #2563eb;
-    --secondary: #1e40af;
-    --light: #f3f4f6;
-    --dark: #1f2937;
-    --gray: #6b7280;
-}
-
+/* Reset & base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    line-height: 1.6;
-    /* background: url(Mthoodbackground.png) no-repeat */
-}
+    font-family: 'Outfit', sans-serif; /* Or 'Poppins' / 'Raleway' */
+    margin: 0;
+    padding: 0;
+    background-color: #fffaf7;
+    color: #333;
+  }
 
+/* Navigation */
 header {
-    background-color: var(--primary);
-    color: white;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffe8ec;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav {
+    background-color: #ffe8f0;
+    padding: 1rem 0;
+  }
+  
+  .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0 1rem;
-}
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #007080;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
 
 .logo {
-    width: 50px;
-    border-radius: 20%;
+  height: 40px;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
+  color: #007c91;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .nav-links a:hover {
-    color: var(--light);
+  color: #ff5f8f;
 }
 
 .hamburger {
-    display: none;
-    cursor: pointer;
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-section {
-    padding: 5rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #007c91;
+  margin-bottom: 1.5rem;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--primary);
-    font-size: 2rem;
-    margin-top: 30px;
+#about,
+#services,
+#testimonials,
+#appointment {
+  padding: 2rem 1.5rem;
 }
 
+#about p {
+    font-size: 1.125rem; /* slightly larger than default */
+    color: #333;          /* darker for better contrast */
+    line-height: 1.7;     /* improve readability */
+    max-width: 700px;     /* keep lines from stretching too wide */
+    margin: 0 auto;       /* center it */
+    text-align: center;   /* align text nicely */
+  }
+/* Hero Section */
 .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Mthoodbackground.png') no-repeat center center/cover;
-    color: white;
-    padding-top: 80px;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #d1f2f2, #ffe8ec);
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #007c91;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin-bottom: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #444;
 }
 
 .btn {
-    display: inline-block;
-    background-color: var(--primary);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
+  background-color: #ffb6b9;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-    background-color: var(--secondary);
+  background-color: #f87590;
+}
+
+/* About */
+#about {
+  background-color: #fff;
+  padding: 3rem 2rem;
 }
 
 .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.about-text {
-    flex: 1;
-    min-width: 300px;
-    font-weight: bold;
-    line-height: 1.8;
-    font-size: 18px;
+.about-text p {
+  font-size: 1.1rem;
+  color: #444;
 }
 
-.about-image {
-    flex: 1;
-    min-width: 300px;
+.about-image img {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Services */
+#services {
+  background-color: #fef5d7;
+  padding: 3rem 2rem;
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
 .service-card {
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+.service-card p,
+.testimonial-card p {
+  font-size: 1rem;         /* Or try 1.1rem for slightly larger */
+  line-height: 1.7;        /* Increased line spacing */
+  color: #333;             /* Optional: make text a bit darker for contrast */
+  font-family: 'Outfit', sans-serif;
+  margin-top: 0.5rem;
 }
+
+
 
 .service-icon {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #ff85a2;
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonials */
+#testimonials {
+  background-color: #e0f7f7;
+  padding: 3rem 2rem;
 }
 
 .testimonials-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .testimonial-card {
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .testimonial-header img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .stars {
-    color: #fbbf24;
-    margin-top: 0.5rem;
+  color: #ffc107;
+}
+
+/* Appointment */
+#appointment {
+  padding: 3rem 2rem;
+  background-color: #fff2f9;
 }
 
 .appointment-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.appointment-text {
-    flex: 1;
-    min-width: 300px;
-    margin-top: 10px;
+.appointment-text h3 {
+  color: #d63384;
 }
 
-.work-hours{
-    margin-top: 10px;
-    font-weight: bold;
+.work-hours {
+  margin-top: 1rem;
+  list-style: none;
+  font-weight: 900;
 }
 
 .appointment-calendly {
-    flex: 2;
-    min-width: 300px;
-    height: 600px;
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
+/* Footer */
 footer {
-    background-color: var(--dark);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
+  background-color: #007c91;
+  color: white;
+  padding: 2rem;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 1rem;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .footer-section h3 {
-    margin-bottom: 1rem;
-    color: var(--primary);
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.5rem;
+  color: #fff;
 }
 
 .footer-section a {
-    color: var(--light);
-    text-decoration: none;
-    transition: all 0.3s ease;
+  color: #ffe8ec;
+  text-decoration: none;
 }
 
 .footer-section a:hover {
-    color: var(--primary);
-}
-
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+  text-decoration: underline;
 }
 
 .social-icons a {
-    color: white;
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+  margin-right: 1rem;
 }
 
-.copyright {
-    margin-top: 2rem;
-    border-top: 1px solid var(--gray);
-    padding-top: 1rem;
-    text-align: center;
-    width: 100%;
+@media (min-width: 768px) {
+  .about-content,
+  .appointment-container,
+  .testimonials-container,
+  .footer-content {
+    flex-direction: row;
+  }
+
+  .appointment-text,
+  .appointment-calendly {
+    flex: 1;
+  }
+
+  .about-text,
+  .about-image {
+    flex: 1;
+  }
+
+  .footer-content {
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--primary);
-        padding: 1rem 0;
-    }
-    
-    .nav-links.active {
-        display: flex;
-    }
-    
-    .nav-links li {
-        margin: 0.5rem 0;
-        text-align: center;
-    }
-    
-    .hamburger {
-        display: block;
-        font-size: 1.5rem;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    #about h2{
-        color: white;
-    }
-    .appointment-text{
-        text-align: center;
-    }
-    .work-hours {
-        margin-left: 10px;
-        margin-top: 10px;
-        list-style: none;
-        font-weight: bold;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ffe8ec;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }

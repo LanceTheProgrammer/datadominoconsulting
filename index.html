@@ -2,107 +2,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lance's Tech Solutions</title>
+    <title>Data Domino Consulting</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=Poppins:wght@400;600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <nav>
-        <img class="logo" src="./logo.png" alt="" />
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#appointment">Book Appointment</a></li>
-        </ul>
-        <div class="hamburger">☰</div>
+        <div class="nav-container">
+          <div class="logo">
+            <img src="logo.png" alt="Logo" />
+          </div>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Book Appointment</a></li>
+          </ul>
+          <div class="spacer"></div> <!-- Just fills the remaining space -->
+        </div>
       </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <h1>Expert Tech Support When You Need It</h1>
+      <h1>Unlock Business Clarity with Data</h1>
       <p>
-        Fast, reliable tech solutions for businesses and individuals. We solve
-        tech problems so you don't have to.
+        At Data Domino Consulting, we transform your data into actionable insights that drive smarter decisions and strategic growth.
       </p>
-      <a href="#appointment" class="btn">Book an Appointment</a>
+      <a href="#appointment" class="btn">Schedule a Consultation</a>
     </section>
 
     <!-- About Section -->
     <section id="about">
-      <h2>About Me</h2>
+      <h2 class="section-title">About Me</h2>
       <div class="about-content">
         <div class="about-text">
           <!-- <h3>Lance Pruitt</h3> -->
           <p>
-            Starting in 2015, I've been providing premium tech support
-            services to businesses and individuals in the portland metro area.
-            My goal is to provide quick response times, clear communication, and
-            ability to explain technical concepts in plain language. Whether
-            you're struggling with hardware issues, software glitches, network
-            problems, or cybersecurity concerns, I have a solution for you. My
-            mission is simple: to remove technology barriers and empower my
-            clients to focus on what matters most to them.
+            I'm a seasoned business analyst with over 8 years of experience helping organizations harness their data for better performance and efficiency. I specialize in bridging the gap between business goals and technology by transforming complex data into clear, impactful strategies. With a background in both corporate analysis and independent consulting, I bring precision, clarity, and results to every engagement.
           </p>
         </div>
         <div class="about-image">
-          <img src="/profileImg_4.png" alt="Tech support team" width="100%" />
+          <img src="/sprofile2.png" alt="Data Consultant Portrait" width="100%" />
         </div>
       </div>
     </section>
 
     <!-- Services Section -->
     <section id="services">
-      <h2>My Services</h2>
+      <h2 class="section-title">My Services</h2>
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">💻</div>
-          <h3>Computer Repair</h3>
+          <h3>Dashboards & Reporting</h3>
           <p>
-            Comprehensive hardware and software troubleshooting for desktops and
-            laptops. We diagnose and fix issues quickly to get you back to work.
+            Custom dashboards in Power BI orTableau for real-time insights and reporting.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>Data Analysis</h3>
+          <p>
+            In-depth analysis of structured and unstructured data to uncover trends, patterns, and opportunities.
           </p>
         </div>
         <div class="service-card">
           <div class="service-icon">🔒</div>
-          <h3>Cybersecurity</h3>
+          <h3>Process Optimization</h3>
           <p>
-            Protect your digital assets with our advanced security solutions. We
-            offer virus removal, security audits, and ongoing protection plans.
+            Evaluate workflows and identify bottlenecks to improve efficiency and reduce costs.
           </p>
         </div>
         <div class="service-card">
           <div class="service-icon">📱</div>
-          <h3>Mobile Device Support</h3>
+          <h3>Strategic Consulting</h3>
           <p>
-            Expert assistance for smartphones and tablets. From screen repairs
-            to data recovery, we ensure your mobile devices work flawlessly.
+            Translate data findings into actionable business terms for effective executive presentations and reports.
           </p>
         </div>
         <div class="service-card">
-          <div class="service-icon">🌐</div>
-          <h3>Network Setup</h3>
+          <div class="service-icon">📱</div>
+          <h3>Stakeholder Communication</h3>
           <p>
-            Professional installation and configuration of home and business
-            networks. We optimize for speed, security, and reliability.
+            Partner with leadership to align data strategy with business goals and decision-making
           </p>
         </div>
         <div class="service-card">
-          <div class="service-icon">☁️</div>
-          <h3>Cloud Services</h3>
+          <div class="service-icon">📱</div>
+          <h3>Market & Competitor Research</h3>
           <p>
-            Seamless migration to cloud platforms. We help you leverage cloud
-            technology for better collaboration and data security.
-          </p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🎓</div>
-          <h3>Tech Training</h3>
-          <p>
-            Personalized training sessions to help you make the most of your
-            technology. Learn at your own pace with our patient instructors.
+            Data-backed insights into industry trends, customer behavior, and competitor strategies.
           </p>
         </div>
       </div>
@@ -110,53 +101,42 @@
 
     <!-- Testimonials Section -->
     <section id="testimonials">
-      <h2>What Our Clients Say</h2>
+      <h2 class="section-title">Client Feedback</h2>
       <div class="testimonials-container">
         <div class="testimonial-card">
           <div class="testimonial-header">
-            <img src="/profile_img_1.png" alt="Client portrait" />
+            <img src="/testimonial_1.jpg" alt="Client portrait" />
             <div>
-              <h4>Michael Johnson</h4>
+              <h4>Samantha Rivera</h4>
               <div class="stars">★★★★★</div>
             </div>
           </div>
           <p>
-            "Lances Tech Solutions saved my business when our server crashed
-            right before a major deadline. They were on-site within the hour and
-            had us back up and running by the end of the day. I can't recommend
-            them enough!"
+            "Working with Data Domino Consulting helped us unlock patterns in our sales data we never noticed before. Their analysis directly influenced our Q3 strategy—and revenue jumped 18%!"
           </p>
         </div>
         <div class="testimonial-card">
           <div class="testimonial-header">
             <img src="/profile_img_2.png" alt="Client portrait" />
             <div>
-              <h4>Danny Dimes</h4>
+              <h4>James Thornton</h4>
               <div class="stars">★★★★★</div>
             </div>
           </div>
           <p>
-            "I was completely stuck with figuring out how to set up my new
-            printer in the office and within minutes of contacting Lance, I
-            received clear, step-by-step support that solved my issue right
-            away. The service was fast, friendly, and incredibly knowledgeable.
-            Highly recommend for anyone needing reliable tech help!"
+            "Clear, actionable insights—exactly what we needed. They took our raw numbers and gave them meaning. I’d recommend Data Domino to any leadership team looking to stay ahead."
           </p>
         </div>
         <div class="testimonial-card">
           <div class="testimonial-header">
-            <img src="/testimonial2_img.jpg" alt="Client portrait" />
+            <img src="/testimonial_2.png" alt="Client portrait" />
             <div>
-              <h4>Emily Green</h4>
+              <h4>Ashley Wu</h4>
               <div class="stars">★★★★★</div>
             </div>
           </div>
           <p>
-            "As someone who's not very tech-savvy, I was nervous about getting
-            my computer fixed. Lance made the whole experience easy and
-            stress-free. He was patient, explained everything in simple terms,
-            and resolved my Windows PC issues quickly. I couldn’t be happier
-            with the service!"
+            "Professional, reliable, and deeply knowledgeable. The dashboards they built for our executive team are now a core part of our weekly strategy reviews."
           </p>
         </div>
       </div>
@@ -164,18 +144,16 @@
 
     <!-- Appointment Section with Calendly -->
     <section id="appointment">
-      <h2>Book an Appointment</h2>
+      <h2 class="section-title">Book a Consultation</h2>
       <div class="appointment-container">
         <div class="appointment-text">
-          <h3>Get Help When You Need It</h3>
+          <h3>Ready to Get Strategic With Your Data?</h3>
           <p>
-            Simply select a date and time that works for you using my online
-            calendar.
+            Schedule a one-on-one session to discuss your business goals and how data can help you reach them.
           </p>
           <ul class="work-hours">
-            <li>Monday - Friday: 6pm-8pm</li>
-            <li>Saturday: 9am - 5pm</li>
-            <li>Sunday: 9am - 5pm</li>
+            <li>Monday - Friday: 9am-6pm</li>
+            <li>Saturday: 10am - 4pm</li>
           </ul>
         </div>
         <div class="appointment-calendly">
@@ -195,13 +173,13 @@
     <footer>
       <div class="footer-content">
         <div class="footer-section">
-          <h3>Lance's Tech Solutions</h3>
-          <p>Your trusted partner for all things tech.</p>
+          <h3>Data Domino Consulting</h3>
+          <p>Empowering better decisions with data-driven insights.</p>
           <div class="social-icons">
             <a href="#">📘</a>
-            <a href="#">📱</a>
+            <a href="#">🔗</a>
+            <a href="#">🐦</a>
             <a href="#">📸</a>
-            <a href="#">📽️</a>
           </div>
         </div>
         <div class="footer-section">
@@ -215,12 +193,12 @@
           </ul>
         </div>
         <div class="footer-section">
-          <h3>Contact Us</h3>
+          <h3>Contact</h3>
           
-          <p>lancetheprogrammer@protonmail.com</p>
+          <p>Shari@datadominoconsulting.com</p>
         </div>
         <div class="copyright">
-          <p>&copy; 2025 Lance's Tech Solutions. All rights reserved.</p>
+          <p>&copy; 2025 Data Domino Consulting. All rights reserved.</p>
         </div>
       </div>
     </footer>

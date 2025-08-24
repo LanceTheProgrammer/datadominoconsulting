@@ -35,7 +35,9 @@ nav {
   }
   
   .logo img {
-    height: 40px;
+    height: 80px;
+    width: auto;
+    margin-top: -20px;
   }
   
   .nav-links {
@@ -58,6 +60,14 @@ nav {
 
 .logo {
   height: 40px;
+}
+
+.linkedin-icon .bg {
+  transition: fill 0.3s ease;
+}
+
+.linkedin-icon:hover .bg {
+  fill: #0a66c2; /* LinkedIn blue (hover effect) */
 }
 
 .nav-links {
@@ -103,8 +113,9 @@ nav {
     line-height: 1.7;     /* improve readability */
     max-width: 700px;     /* keep lines from stretching too wide */
     margin: 0 auto;       /* center it */
-    text-align: center;   /* align text nicely */
+    text-align: left;     /* Changed from center to left */
   }
+
 /* Hero Section */
 .hero {
   text-align: center;
@@ -139,29 +150,104 @@ nav {
   background-color: #f87590;
 }
 
-/* About */
+/* About Section - Enhanced Layout */
 #about {
   background-color: #fff;
-  padding: 3rem 2rem;
+  padding: 5rem 2rem;
 }
 
-.about-content {
+.aboutmeimg {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.about-text {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: auto;
+  align-items: flex-start;
+  gap: 3rem;
+  background-color: #fafafa;
+  padding: 2.5rem;
+  border-radius: 16px;
+  border-left: 4px solid #007c91;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.about-text > div {
+  flex: 2; /* Text takes up 2/3 of the space */
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #007c91;
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .about-text p {
   font-size: 1.1rem;
-  color: #444;
+  line-height: 1.9;
+  color: #555;
+  text-align: left;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin: 0;
 }
 
-.about-image img {
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+
+/* Second about section - content columns */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: auto;
 }
+
+/* Content sections styling for second about section */
+.about-content > div {
+  background-color: #fafafa;
+  padding: 2.5rem;
+  border-radius: 16px;
+  border-left: 4px solid #007c91;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.about-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #007c91;
+  text-align: left;
+  font-weight: 600;
+  position: relative;
+}
+
+.about-content h1::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ffb6b9;
+  margin-top: 0.5rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+/* Highlight key terms */
+.about-content p strong {
+  color: #007c91;
+  font-weight: 600;
+}
+
+/* Removed unused .about-image styles since they don't match the HTML */
 
 /* Services */
 #services {
@@ -191,8 +277,6 @@ nav {
   font-family: 'Outfit', sans-serif;
   margin-top: 0.5rem;
 }
-
-
 
 .service-icon {
   font-size: 2rem;
@@ -282,6 +366,10 @@ footer {
   color: #fff;
 }
 
+.footer-section p {
+  margin-top: 10px;
+}
+
 .footer-section a {
   color: #ffe8ec;
   text-decoration: none;
@@ -291,11 +379,20 @@ footer {
   text-decoration: underline;
 }
 
+.footer-section ul {
+  margin-top: 10px;
+}
+
 .social-icons a {
   font-size: 1.5rem;
   margin-right: 1rem;
 }
 
+.social-icons a svg {
+  margin-top: 10px;
+}
+
+/* Responsive Design */
 @media (min-width: 768px) {
   .about-content,
   .appointment-container,
@@ -309,17 +406,13 @@ footer {
     flex: 1;
   }
 
-  .about-text,
-  .about-image {
-    flex: 1;
-  }
-
   .footer-content {
     justify-content: space-between;
   }
 }
 
 @media (max-width: 768px) {
+  /* Mobile navigation */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -338,5 +431,59 @@ footer {
 
   .hamburger {
     display: block;
+  }
+
+  /* Mobile about section adjustments */
+  .about-text {
+    flex-direction: column !important;
+    gap: 3rem !important;
+    padding: 2rem !important;
+    min-height: auto !important;
+    text-align: center;
+  }
+
+  .about-text > div:first-child {
+    flex: none !important;
+    padding-right: 0 !important;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  .aboutmeimg {
+    width: 280px !important;
+    height: 350px !important;
+    margin: 0 auto !important;
+    align-self: center !important;
+  }
+
+  .about-content {
+    padding: 3rem 1rem;
+    gap: 3rem;
+  }
+  
+  .about-content > div {
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+  
+  .about-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+  
+  .about-content p,
+  .about-text p {
+    font-size: 1rem;
   }
 }

@@ -136,6 +136,7 @@ nav {
 }
 
 .btn {
+  display: inline-block;
   background-color: #ffb6b9;
   color: white;
   padding: 0.75rem 1.5rem;
@@ -144,6 +145,34 @@ nav {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
+  text-align: center;
+  min-width: 250px;   /* 🔑 same width */
+}
+
+.waitlist-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem; /* 🔑 reduced spacing */
+  margin-bottom: 2rem; /* optional to give breathing room */
+}
+
+.nav-cta {
+  background-color: #ff5f8f;   /* standout color */
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.nav-cta:hover {
+  background-color: #d94c73;
+}
+
+.booking-logo{
+  margin-top: 70px;
+  margin-left: 80px;
 }
 
 .btn:hover {
@@ -204,6 +233,7 @@ nav {
   gap: 4rem;
   max-width: 1200px;
   margin: auto;
+  margin-top: -165px;
 }
 
 /* Content sections styling for second about section */
@@ -267,6 +297,12 @@ nav {
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
   text-align: center;
+}
+
+.service-logo {
+  margin-top: 25px;
+  width: 75px;
+  height: auto;
 }
 
 .service-card p,
